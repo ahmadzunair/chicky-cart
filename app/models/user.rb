@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
    enum role:   %w[user seller admin]
+
+   has_one_attached :image
+
+
 end
