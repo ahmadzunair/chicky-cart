@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 		  admin_dashboard_index_path
 		# elsif resource.user?
 		#   dashboard_index_path
-    end
-  end
+    	end
+  	end
 
 end
