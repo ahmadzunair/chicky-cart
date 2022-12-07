@@ -21,10 +21,17 @@ module Admin
     end
 
     def create_admin
-    	@user = User.new
-    	
+    	@user = User.new    	
     end
-    
+
+    def send_mail_create_admin
+    	@user = User.new(user_params)
+    	@user.password = 'password'
+    	@user.password_confirmation = 'password'
+    	@user.save
+    	NotifyUserMailer.create_admin(new_admin: @user).deliver_now
+    end
+
     def view_block_user
     	@users = User.deleted
     end
@@ -44,7 +51,7 @@ module Admin
     
 
     def user_params
-	    params.require(:user).permit(:email, :role)
+	    params.require(:user).permit(:email, :role, :first_name, :last_name)
 	  end
 
 	  

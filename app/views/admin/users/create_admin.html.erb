@@ -16,31 +16,31 @@
   <div class="row flex-nowrap">
     <%= render partial: 'admin/users/admin_sidebar' %>
     <div class="col py-3 overflow-auto">
-      <h1>hello Word</h1>
+      <%= form_for @user, :as => :user, method: :post, :url => send_mail_create_admin_admin_users_path do |f| %>
+			  <div class="col-md-6  mx-auto">
+			    <!-- Qualification -->
+			    <h2 class="stylish mt-3 mt-md-1 text-center">Create Admin</h2>
+			    <br>
+			    <div class="form-group">
+			      <label for="user_first_name">Email:</label>
+			      <%= f.text_field :email, placeholder: "Email",class: "form-control" %><br>
+			    </div>
+			    <div class="form-group">
+			      <label for="user_first_name">First Name:</label>
+			      <%= f.text_field :first_name, placeholder: "First Name",class: "form-control" %><br>
+			    </div>
+			    <div class="form-group">
+			      <label for="user_first_name">Last Name:</label>
+			      <%= f.text_field :last_name, placeholder: "Last Name",class: "form-control" %><br>
+			    </div>
+			    <div class="form-group">
+			      <%= f.hidden_field :role, value: 'admin'%>
+			    </div>
+			    <div class="form-group">
+			      <%= f.submit 'Send E-mail', class: 'btn btn-primary' %>
+			    </div>
+			  </div>
+			<% end %>
     </div>
   </div>
 </div>
-
-<!-- <div class="sidebar">
-  <header >
-    <%#= image_tag 'logo.png', class: "logo-img "%>
-    <br>
-    <em class="text-white"><b>Chicky Cart</b></em>
-  </header>
-  <hr>
-  <ul>
-    <li>
-      <%#= link_to 'Block User', admin_users_path %>
-    </li>
-    <li>
-      <%#= link_to 'Unblock User', view_block_user_admin_users_path %>
-      
-    </li>
-    <li>
-      <a href="#">Manage Subscription</a>
-    </li>
-    <li>
-      <a href="#">Verify Account</a>
-    </li>
-  </ul>
-</div> -->

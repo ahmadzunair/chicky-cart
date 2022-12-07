@@ -17,7 +17,7 @@ Rails.application.routes.draw do
         get :view_profile
       end
       collection do
-        # post :send_mail_create_admin
+        post :send_mail_create_admin
         get :view_block_user
         get :create_admin
       end
