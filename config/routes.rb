@@ -7,11 +7,26 @@ Rails.application.routes.draw do
   root 'visitors#index'
 
   namespace :admin do
+
+    resources :users do
+      member do
+        get :block
+        get :unblock
+        delete :delete_user
+        delete :delete_blocked_user
+        get :view_profile
+      end
+      collection do
+        # post :send_mail_create_admin
+        get :view_block_user
+        get :create_admin
+      end
+    end
+
+
+
   
-  resources :dashboard, path: '/'
+    resources :dashboard, path: '/'
   
-end
-
-
-
-end
+    end
+  end

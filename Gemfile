@@ -10,6 +10,7 @@ gem 'pg', '1.1'
 gem 'pry'
 gem "letter_opener", group: :development
 gem "devise", "~> 4.8"
+gem "paranoia", "~> 2.2"
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

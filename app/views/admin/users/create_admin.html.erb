@@ -1,0 +1,46 @@
+<div class="container-fluid admin">
+  <div class="row bg-secondary text-white py-3">
+    <ul class="nav px-5 w-100 justify-content-between">
+      <li class="nav-item">You are logged in as an admin:</li>
+      <li class="nav-item">
+        <em class="font-weight-bold"> admin@example.com </em>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete, style: 'color: white' %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid position-fixed">
+  <div class="row flex-nowrap">
+    <%= render partial: 'admin/users/admin_sidebar' %>
+    <div class="col py-3 overflow-auto">
+      <h1>hello Word</h1>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="sidebar">
+  <header >
+    <%#= image_tag 'logo.png', class: "logo-img "%>
+    <br>
+    <em class="text-white"><b>Chicky Cart</b></em>
+  </header>
+  <hr>
+  <ul>
+    <li>
+      <%#= link_to 'Block User', admin_users_path %>
+    </li>
+    <li>
+      <%#= link_to 'Unblock User', view_block_user_admin_users_path %>
+      
+    </li>
+    <li>
+      <a href="#">Manage Subscription</a>
+    </li>
+    <li>
+      <a href="#">Verify Account</a>
+    </li>
+  </ul>
+</div> -->

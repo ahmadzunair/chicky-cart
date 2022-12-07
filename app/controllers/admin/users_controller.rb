@@ -1,9 +1,7 @@
 module Admin
   class UsersController < BaseController
-  	
     def index
-    	@user = User.new
-      # @users = User.all.where.not(role: 'admin')
+    	@users = User.all.where(role: 'seller')
     end
 
     
@@ -18,21 +16,15 @@ module Admin
     	redirect_to admin_users_path
     end
 
-
-    def create_admin
-    	@user = User.new
-    end
-
-    def check_profile
+    def view_profile
     	@user =  User.find(params[:id])    	
     end
 
-    def destroy
-    	@client.destroy
-	    flash[:success] = 'User Profile has been deleted'
-	    redirect_to admin_users_path
+    def create_admin
+    	@user = User.new
+    	
     end
-
+    
     def view_block_user
     	@users = User.deleted
     end
@@ -49,17 +41,12 @@ module Admin
 	  end
 
     private
-    def load_user
-	    @client = User.find(params[:id])
-	  end
+    
 
     def user_params
 	    params.require(:user).permit(:email, :role)
 	  end
 
-	  def password_params
-	    # NOTE: Using `strong_parameters` gem
-	    params.require(:user).permit(:password, :password_confirmation)
-	  end
+	  
   end
 end

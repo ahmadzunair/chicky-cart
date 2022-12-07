@@ -1,8 +1,8 @@
 module Admin
   class DashboardController < BaseController
     def index
-      @users = User.new
-      # @users = User.all.where.not(role: 'admin')
+      @users = User.all.where(role: 'seller')
     end
+    
   end
 end
