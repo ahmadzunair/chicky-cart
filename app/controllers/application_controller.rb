@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
 	def after_sign_in_path_for(resource)
 		if resource.admin?
 		  admin_users_path
-		# elsif resource.user?
-		#   dashboard_index_path
+		elsif resource.seller? && resource.is_complete == false
+		   seller_users_path
     	end
   	end
 

@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2022_11_28_173457) do
     t.integer "role"
     t.string "first_name"
     t.string "last_name"
+    t.boolean "is_complete", default: false
     t.datetime "remember_created_at"
     t.string "confirmation_token"
     t.datetime "confirmed_at"

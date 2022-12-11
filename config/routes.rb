@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  # devise_for :users, controllers: {
-  #   confirmations: 'confirmations'
-  # }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'visitors#index'
 
+  namespace :seller do
+    resources :users do
+      
+    end
+  end
+  
   namespace :admin do
-
     resources :users do
       member do
         get :block
@@ -22,11 +24,9 @@ Rails.application.routes.draw do
         get :create_admin
       end
     end
-
-
-
-  
     resources :dashboard, path: '/'
   
     end
   end
+
+
