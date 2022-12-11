@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 		if resource.admin?
 		  admin_users_path
 		elsif resource.seller? && resource.is_complete == false
-		   seller_users_path
+		   form_wizard_seller_users_path
     	end
   	end
 

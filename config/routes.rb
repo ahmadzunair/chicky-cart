@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   namespace :seller do
     resources :users do
-      
+      collection do
+        get :form_wizard
+      end
     end
   end
   
