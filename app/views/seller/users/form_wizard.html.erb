@@ -1,9 +1,10 @@
+<%= form_for @user, :as => :user, method: :patch, :url => user_path(@user), id: 'form' do |f| %>
 <div class="contain">
     <div class="card">
         <div class="form">
           <div class="left-side">
             <div class="left-heading">
-              <h3>indeed</h3>
+              <h3>Chicky Cart</h3>
             </div>
             <div class="steps-content">
               <h3>Step <span class="step-number">1</span></h3>
@@ -15,180 +16,15 @@
             <ul class="progress-bar">
               <li class="active">Personal Information</li>
               <li>Farm</li>
-              <li>Work Experience</li>
               <li>User Photo</li>
             </ul>
           </div>
             <div class="right-side">
-                <div class="main active">
-                  <small><i class="fa fa-smile-o"></i></small>
-                  <div class="text">
-                    <h2>Your Personal Information</h2>
-                    <p>Enter your personal information to get closer to client.</p>
-                  </div>
-                  <div class="input-text">
-                      <div class="input-div">
-                        <input type="text" required require id="user_name">
-                        <span>First Name</span>
-                      </div>
-                      <div class="input-div"> 
-                        <input type="text" required require>
-                        <span>Last Name</span>
-                      </div>
-                  </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Phone number</span>
-                        </div>
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Landline</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>City</span>
-                        </div>
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Address</span>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-                <div class="main">
-                    <small><i class="fa fa-smile-o"></i></small>
-                    <div class="text">
-                        <h2>Farm</h2>
-                        <p>Farm Details for Client</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Farm Name</span>
-                        </div>
-                        <div class="input-div"> 
-                            <input type="date" required class="form-control">
-                            <span>Year of Establish Farm</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Village Name</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Farm Address</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <select > 
-                                <option>Bird Type</option>
-                                <option>Chicken</option>
-                                <option>Turkeys</option>
-                                <option>Ducks</option>
-                                <option>Guinea Fowl</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <select > 
-                                <option>Category</option>
-                                <option>Broiler</option>
-                                <option>Layer</option>
-                                <option>Hatchery</option>
-                                <option>Egg</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-                <div class="main">
-                    <small><i class="fa fa-smile-o"></i></small>
-                    <div class="text">
-                        <h2>Work Experiences</h2>
-                        <p>Can you talk about your past work experience?</p>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required require>
-                            <span>Experience 1</span>
-                        </div>
-                        <div class="input-div"> 
-                            <input type="text" required require>
-                            <span>Position</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Experience 2</span>
-                        </div>
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Position</span>
-                        </div>
-                    </div>
-                    <div class="input-text">
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Experience 3</span>
-                        </div>
-                        <div class="input-div">
-                            <input type="text" required>
-                            <span>Position</span>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="next_button">Next Step</button>
-                    </div>
-                </div>
-                
-                
-                
-                <div class="main">
-                    <small><i class="fa fa-smile-o"></i></small>
-                    <div class="text">
-                        <h2>User Photo</h2>
-                        <p>Upload your profile picture and share yourself.</p>
-                    </div>
-                    <div class="user_card">
-                        <span></span>
-                        <div class="circle">
-                            <span><%= image_tag 'dummy.jpg' %></span>
-                            
-                        </div>
-                        <div class="social">
-                            <span><i class="fa fa-share-alt"></i></span>
-                            <span><i class="fa fa-heart"></i></span>
-                            
-                        </div>
-                        <div class="user_name">
-                            <h3>Peter Hawkins</h3>
-                            <div class="detail">
-                                <p><a href="#">Izmar,Turkey</a>Hiring</p>
-                                <p>17 last day . 94Apply</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="buttons button_space">
-                        <button class="back_button">Back</button>
-                        <button class="submit_button">Submit</button>
-                    </div>
-                </div>
+
+               <%= render partial: 'seller/users/personal_information', :locals => { :f => f } %>
+               <%= render partial: 'seller/users/farm_information', :locals => { :f => f } %>
+               <%= render partial: 'seller/users/user_image', :locals => { :f => f } %>
+
                  <div class="main">
                      <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
@@ -203,6 +39,8 @@
         </div>
     </div>
 </div>
+
+<% end %>
 
 <script type="text/javascript">
   var next_click=document.querySelectorAll(".next_button");

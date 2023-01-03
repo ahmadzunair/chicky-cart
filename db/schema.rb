@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_28_173457) do
+ActiveRecord::Schema.define(version: 2023_01_03_114922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,19 @@ ActiveRecord::Schema.define(version: 2022_11_28_173457) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "farms", force: :cascade do |t|
+    t.string "farm_name"
+    t.date "year_of_establish"
+    t.string "village_name"
+    t.string "farm_address"
+    t.string "bird_type"
+    t.string "category"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_farms_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -51,6 +64,10 @@ ActiveRecord::Schema.define(version: 2022_11_28_173457) do
     t.integer "role"
     t.string "first_name"
     t.string "last_name"
+    t.string "phone_number"
+    t.string "city"
+    t.string "address"
+    t.string "landline"
     t.boolean "is_complete", default: false
     t.datetime "remember_created_at"
     t.string "confirmation_token"

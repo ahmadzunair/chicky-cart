@@ -1,0 +1,40 @@
+<div class="main active">
+  <small><i class="fa fa-smile-o"></i></small>
+  <div class="text">
+    <h2>Your Personal Information</h2>
+    <p>Enter your personal information to get closer to client.</p>
+  </div>
+  <div class="input-text">
+      <div class="input-div">
+        <%= f.text_field :first_name, id: 'user_name', placeholder: 'First Name' %>
+        <span>First Name</span>
+      </div>
+      <div class="input-div"> 
+        <%= f.text_field :last_name , placeholder: 'Last Name'%>
+        <span>Last Name</span>
+      </div>
+  </div>
+    <div class="input-text">
+        <div class="input-div">
+            <%= f.text_field :phone_number, placeholder: '03xxxxxxxxx' %>
+            <span>Phone number</span>
+        </div>
+        <div class="input-div">
+            <%= f.text_field :landline, placeholder: '04xxxxxxxx' %>
+            <span>Landline</span>
+        </div>
+    </div>
+    <div class="input-text">
+        <div class="input-div">
+            <%= f.text_field :city %>
+            <span>City</span>
+        </div>
+        <div class="input-div">
+            <%= f.text_field :address , placeholder: 'Address'%>
+            <span>Address</span>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="next_button">Next Step</button>
+    </div>
+</div>

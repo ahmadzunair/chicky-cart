@@ -13,6 +13,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.integer :role
       t.string :first_name
       t.string :last_name
+      t.string :phone_number
+      t.string :city
+      t.string :address
+      t.string :landline
       t.boolean :is_complete, default: false
       
       t.datetime :remember_created_at

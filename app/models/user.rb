@@ -11,4 +11,9 @@ class User < ApplicationRecord
    has_one_attached :image
 
 
+   has_one :farm, dependent: :destroy
+
+
+
 end
+

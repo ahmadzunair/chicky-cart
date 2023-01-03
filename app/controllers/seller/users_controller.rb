@@ -7,6 +7,6 @@ module Seller
     def form_wizard
       @user = User.find(current_user.id)
     end
-	  
+
   end
 end
