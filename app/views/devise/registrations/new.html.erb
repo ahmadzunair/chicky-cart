@@ -21,7 +21,7 @@
       </div>
       <div class="form-field d-flex align-items-center">
         <span class="fa-solid fa-user" ></span>
-        <%= f.select :role, options_for_select([["Seller", "seller"],["Buyer","user"]], selected: "Seller", class: "form-control") %>
+        <%= f.select :role, options_for_select([["Seller", "seller"],["Buyer","user"]], selected: "Seller") %>
       </div>
       <%= f.submit "Sign up", class: "btn mt-3" %>
   <% end %>
