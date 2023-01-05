@@ -18,7 +18,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :address
       t.string :landline
       t.boolean :is_complete, default: false
-      
+      t.boolean :is_subscription, default: false
+
       t.datetime :remember_created_at
       
       # confirmation

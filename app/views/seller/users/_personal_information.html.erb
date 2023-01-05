@@ -33,6 +33,7 @@
             <%= f.text_field :address , placeholder: 'Address'%>
             <span>Address</span>
         </div>
+        <%= f.hidden_field :is_complete, value: 'true'%>
     </div>
     <div class="buttons">
         <button class="next_button">Next Step</button>

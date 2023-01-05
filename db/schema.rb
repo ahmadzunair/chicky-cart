@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2023_01_03_114922) do
     t.string "address"
     t.string "landline"
     t.boolean "is_complete", default: false
+    t.boolean "is_subscription", default: false
     t.datetime "remember_created_at"
     t.string "confirmation_token"
     t.datetime "confirmed_at"

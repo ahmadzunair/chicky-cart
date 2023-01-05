@@ -14,17 +14,11 @@
         <% end %>
       </li>
       <li>
-        <a href="#" class="nav-link px-0 align-middle">
+        <%= link_to (manage_subscription_admin_users_path), class: "nav-link px-0 align-middle" do %>
           <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline text-white">Manage Subscription</span>
-        </a>
+        <% end %>
       </li>
       <li>
-        <a href="#" class="nav-link px-0 align-middle">
-          <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline text-white">Verify Account</span>
-        </a>
-      </li>
-      <li>
-        
         <%= link_to (create_admin_admin_users_path), class: "nav-link px-0 align-middle" do %>
           <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline text-white">Create Admin</span>
         <% end %>

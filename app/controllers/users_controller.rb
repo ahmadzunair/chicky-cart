@@ -1,15 +1,21 @@
 class UsersController < ApplicationController
+	
 	def update
 		@user = User.find(current_user.id)
+		@user.image.attach(params[:user][:image]) if params[:user][:image].present?
 		@user.build_farm(farm_param).save
 		@user.update(user_param)
+		redirect_to is_approved_account_seller_users_path
+		flash[:info] = "Data has Been Saved!"
+
+		
 
 	end
 
 	private
 
 	def user_param
-		params.require(:user).permit(:first_name, :last_name, :phone_number,:city, :address, :landline)
+		params.require(:user).permit(:first_name, :last_name, :phone_number,:city, :address, :landline, :is_complete, :image)
 	end
 
 	def farm_param

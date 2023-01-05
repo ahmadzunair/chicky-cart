@@ -2,18 +2,21 @@
   <div class="row">
       <div class="col-md-4">
           <div class="profile-img">
-            <%= image_tag 'dummy.jpg' %>
-              
+            <% if @user.image.attached? %>
+              <%= image_tag @user.image %>
+            <% else %>
+              <%= image_tag 'dummy.jpg' %>
+            <% end %>
           </div>
       </div>
       <div class="col-md-6">
           <div class="profile-head">
                       <h5>
-                          Ahmad Zunair
+                          <%= @user.first_name %> <%= @user.last_name %>
                       </h5>
-                      <h6>
+                      <!-- <h6>
                           Web Developer and Designer
-                      </h6>
+                      </h6> -->
                       <p class="proile-rating">RANKINGS : <span>8/10</span></p>
               <ul class="nav nav-tabs">
                   <li class="nav-item">
@@ -26,16 +29,15 @@
       <div class="row">
         <div class="col-md-4">
           <div class="profile-work">
-            <p>Farm</p>
-            <a href="">Farm Name</a><br/>
-            <a href="">Address</a><br/>
-            <a href=""></a>
-            <p>products</p>
-            <a href="">Type</a><br/>
-            <a href="">No of Chicks</a><br/>
-            <a href="">Weight</a><br/>
-            <a href="">Price</a><br/>
-            <a href="">XYZ</a><br/>
+            <h3>Farm</h3>
+            <p href=""><%= @farm.farm_name %></p><br/>
+            <p href=""><%= @farm.farm_address %></p><br/>
+            <h3>products</h3>
+            <p href=""><%= @farm.bird_type %></p><br/>
+            <p href=""><%= @farm.category %></p><br/>
+            <p href="">No of Chicks</p><br/>
+            <p href="">Weight</p><br/>
+            <p href="">Price</p><br/>
           </div>
         </div>
           <div class="col-md-8">
@@ -43,10 +45,10 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <div class="row">
                     <div class="col-md-6">
-                      <label>User Id</label>
+                      <label>ID</label>
                     </div>
                     <div class="col-md-6">
-                      <p>1</p>
+                      <p><%= @user.id %></p>
                     </div>
                   </div>
                   <div class="row">
@@ -54,7 +56,7 @@
                       <label>Name</label>
                     </div>
                     <div class="col-md-6">
-                      <p>Ahmad Zunair</p>
+                      <p><%= @user.first_name %> <%= @user.last_name %></p>
                     </div>
                   </div>
                   <div class="row">
@@ -62,7 +64,7 @@
                       <label>Email</label>
                     </div>
                     <div class="col-md-6">
-                      <p>f190987@cfd.nu.edu.pk</p>
+                      <p><%= @user.email %></p>
                     </div>
                   </div>
                   <div class="row">
@@ -70,15 +72,31 @@
                       <label>Phone</label>
                     </div>
                     <div class="col-md-6">
-                      <p>03147003329</p>
+                      <p><%= @user.phone_number %></p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <label>Profession</label>
+                      <label>Landline</label>
                     </div>
                     <div class="col-md-6">
-                      <p>XYZ</p>
+                      <p><%= @user.landline %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>City</label>
+                    </div>
+                    <div class="col-md-6">
+                      <p><%= @user.city %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Address</label>
+                    </div>
+                    <div class="col-md-6">
+                      <p><%= @user.address %></p>
                     </div>
                   </div>
                 </div>

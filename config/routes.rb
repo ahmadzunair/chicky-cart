@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   namespace :seller do
     resources :users do
       collection do
+        get :is_approved_account
         get :form_wizard
       end
     end
@@ -20,11 +21,13 @@ Rails.application.routes.draw do
       member do
         get :block
         get :unblock
+        get :verify_user
         delete :delete_user
         delete :delete_blocked_user
         get :view_profile
       end
       collection do
+        get :manage_subscription
         post :send_mail_create_admin
         get :view_block_user
         get :create_admin

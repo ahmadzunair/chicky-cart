@@ -7,7 +7,8 @@
     <div class="user_card">
         <span></span>
         <div class="circle">
-            <span><%= image_tag 'dummy.jpg' %></span>
+            <%= f.file_field :image, accept: 'image/png,image/jpeg'%>
+            <!-- <span><%#= image_tag 'dummy.jpg' %></span> -->
             
         </div>
         <div class="social">
