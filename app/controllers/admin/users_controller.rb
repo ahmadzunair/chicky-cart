@@ -54,6 +54,7 @@ module Admin
       @user = User.find(params[:id])
       @user.is_subscription = true
       @user.save
+      NotifyUserMailer.approve_account(@user).deliver_now
       redirect_to manage_subscription_admin_users_path
       flash[:danger] = "A New user Join Chicky Cart!"
     end
