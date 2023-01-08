@@ -1,4 +1,50 @@
-<h2>Admin Account from Chicky Cart</h2>
-<p>Please Log in your admin account through email and password</p>
-<h4>Email: <%= @admin_user[:new_admin].email %> </h4>
-<h4>Password: password</h4>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #a4c639;
+    }
+
+    table {
+      width: 60%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to Chicky Cart</h2>
+  <p>Dear <%= @admin_user[:new_admin].email %>,</p>
+  <p>Thank you for signing up as an administrator for Chicky Cart. Please use the following credentials to log in to your admin account:</p>
+  <table>
+    <tr>
+      <th>Email:</th>
+      <td><%= @admin_user[:new_admin].email %></td>
+    </tr>
+    <tr>
+      <th>Password:</th>
+      <td>password</td>
+    </tr>
+  </table>
+  <p>We hope you have a great experience using Chicky Cart. If you have any questions or need assistance, please don't hesitate to contact us.</p>
+  <p>Sincerely,<br>
+  The Chicky Cart Team</p>
+</body>
+</html>

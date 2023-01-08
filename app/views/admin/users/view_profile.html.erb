@@ -1,26 +1,26 @@
-<div class="container emp-profile">
+<div class="container emp-profile ">
   <div class="row">
       <div class="col-md-4">
-          <div class="profile-img">
+          <div class="profile-img rounded" >
             <% if @user.image.attached? %>
-              <%= image_tag @user.image %>
+              <%= image_tag(@user.image, class: "rounded-circle shadow-4-strong") %>
             <% else %>
-              <%= image_tag 'dummy.jpg' %>
+              <%= image_tag("dummy.jpg", class: "rounded-circle shadow-4-strong") %>
             <% end %>
           </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 ">
           <div class="profile-head">
-                      <h5>
-                          <%= @user.first_name %> <%= @user.last_name %>
-                      </h5>
+                      <h3 class=" font-weight-bold " style="color: #333333;">
+                          <%= @user.first_name.present? ? @user.first_name : 'N/A' %> <%= @user.last_name.present? ? @user.last_name : 'N/A' %>
+                      </h3>
                       <!-- <h6>
                           Web Developer and Designer
                       </h6> -->
-                      <p class="proile-rating">RANKINGS : <span>8/10</span></p>
-              <ul class="nav nav-tabs">
+                      <p class="proile-rating">RANKINGS : <span style="color: #999999;">8/10</span></p>
+              <ul class="nav nav-tabs" style="position: static;">
                   <li class="nav-item">
-                      <a class="nav-link active">About</a>
+                      <a class="nav-link active" style="color: #333333;">About</a>
                   </li>
               </ul>
           </div>
@@ -28,75 +28,76 @@
   </div>
       <div class="row">
         <div class="col-md-4">
-          <div class="profile-work">
-            <h3>Farm</h3>
-            <p href=""><%= @farm.farm_name %></p><br/>
-            <p href=""><%= @farm.farm_address %></p><br/>
-            <h3>products</h3>
-            <p href=""><%= @farm.bird_type %></p><br/>
-            <p href=""><%= @farm.category %></p><br/>
+          <div class="profile-work ">
+            <h3 style="color: #333333;">Farm</h3>
+            <p href=""><%= @farm.farm_name.present? ? @farm.farm_name : 'N/A' %></p><br/>
+            <p href=""><%= @farm.farm_address.present? ? @farm.farm_address : 'N/A' %></p><br/>
+            <h3 style="color: #333333;">products</h3>
+            <p href=""><%= @farm.bird_type.present? ? @farm.bird_type : 'N/A' %></p><br/>
+            <p href=""><%= @farm.category.present? ? @farm.category : 'N/A' %></p><br/>
             <p href="">No of Chicks</p><br/>
             <p href="">Weight</p><br/>
             <p href="">Price</p><br/>
           </div>
         </div>
-          <div class="col-md-8">
+          <div class="col-md-8 ">
               <div class="tab-content profile-tab" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <div class="row">
                     <div class="col-md-6">
-                      <label>ID</label>
+                      <label style="color: #333333;">ID</label>
                     </div>
-                    <div class="col-md-6">
-                      <p><%= @user.id %></p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label>Name</label>
-                    </div>
-                    <div class="col-md-6">
-                      <p><%= @user.first_name %> <%= @user.last_name %></p>
+                    <div class="col-md-6 ">
+                      <p style="color: #999999;"><%= @user.id.present? ? @user.id : 'N/A' %></p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <label>Email</label>
+                      <label style="color: #333333;">Name</label>
                     </div>
                     <div class="col-md-6">
-                      <p><%= @user.email %></p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label>Phone</label>
-                    </div>
-                    <div class="col-md-6">
-                      <p><%= @user.phone_number %></p>
+                      <p style="color: #999999;"><%= @user.first_name.present? ? @user.first_name : 'N/A' %> <%= @user.last_name.present? ? @user.last_name : 'N/A' %></p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <label>Landline</label>
+                      <label style="color: #333333;">Email</label>
                     </div>
                     <div class="col-md-6">
-                      <p><%= @user.landline %></p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label>City</label>
-                    </div>
-                    <div class="col-md-6">
-                      <p><%= @user.city %></p>
+                      <p style="color: #999999;"><%= @user.email.present? ? @user.email : 'N/A' %></p>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <label>Address</label>
+                      <label style="color: #333333;">Phone</label>
+                    </div>
+                      <div class="col-md-6">
+                    
+                      <p style="color: #999999;"><%= @user.phone_number.present? ? @user.phone_number : 'N/A' %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label style="color: #333333;">Landline</label>
                     </div>
                     <div class="col-md-6">
-                      <p><%= @user.address %></p>
+                      <p style="color: #999999;"><%= @user.landline.present? ? @user.landline : 'N/A' %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label style="color: #333333;">City</label>
+                    </div>
+                    <div class="col-md-6">
+                      <p style="color: #999999;"><%= @user.city.present? ? @user.city : 'N/A' %></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label style="color: #333333;">Address</label>
+                    </div>
+                    <div class="col-md-6">
+                      <p style="color: #999999;"><%= @user.address.present? ? @user.address : 'N/A' %></p>
                     </div>
                   </div>
                 </div>

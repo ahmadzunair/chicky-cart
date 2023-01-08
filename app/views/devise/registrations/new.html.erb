@@ -19,10 +19,14 @@
         <span class="fas fa-key"></span>
         <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Conform Password" %>
       </div>
-      <div class="form-field d-flex align-items-center">
-        <span class="fa-solid fa-user" ></span>
-        <%= f.select :role, options_for_select([["Seller", "seller"],["Buyer","user"]], selected: "Seller") %>
-      </div>
+
+        <div class="form-field d-flex align-items-center">
+          <span class="fas fa-user" ></span>
+          <select name="user[role]" style="width: 100%; display: block; border: none; outline: none; background: none; font-size: 1.2rem; color: #666; padding: 10px 15px 10px 10px;">
+            <option value="seller">Seller</option>
+            <option value="user">Buyer</option>
+          </select>
+        </div>
       <%= f.submit "Sign up", class: "btn mt-3" %>
   <% end %>
   <%= render "devise/shared/links" %>
