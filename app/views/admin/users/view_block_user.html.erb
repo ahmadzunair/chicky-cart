@@ -43,9 +43,6 @@
                 <i class="fa-solid fa-unlock"></i>
               <% end %>
             <% end %>
-            <%= link_to (view_profile_admin_user_path(user)), class: "btn-primary btn table-btn", title: 'View Profile' do %>
-              <i class="fa-solid fa-eye"></i>
-            <% end %>
             <%= link_to (delete_blocked_user_admin_user_path(user)), method: :delete , class: "btn-primary btn table-btn", title: 'Delete User' do %>
               <i class="fa-solid fa-trash"></i>
             <% end %>

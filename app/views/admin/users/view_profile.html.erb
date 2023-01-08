@@ -30,11 +30,11 @@
         <div class="col-md-4">
           <div class="profile-work ">
             <h3 style="color: #333333;">Farm</h3>
-            <p href=""><%= @farm.farm_name.present? ? @farm.farm_name : 'N/A' %></p><br/>
-            <p href=""><%= @farm.farm_address.present? ? @farm.farm_address : 'N/A' %></p><br/>
+            <p href=""><%= @farm.farm_name.nil? ?  'N/A' : @farm.farm_name %></p><br/>
+            <p href=""><%= @farm.farm_address.nil? ?  'N/A' : @farm.farm_address %></p><br/>
             <h3 style="color: #333333;">products</h3>
-            <p href=""><%= @farm.bird_type.present? ? @farm.bird_type : 'N/A' %></p><br/>
-            <p href=""><%= @farm.category.present? ? @farm.category : 'N/A' %></p><br/>
+            <p href=""><%= @farm.bird_type.nil? ?  'N/A' : @farm.bird_type  %></p><br/>
+            <p href=""><%= @farm.category.nil? ?  'N/A' : @farm.category  %></p><br/>
             <p href="">No of Chicks</p><br/>
             <p href="">Weight</p><br/>
             <p href="">Price</p><br/>
