@@ -1,41 +1,34 @@
-<div class="main active">
-  <small><i class="fa fa-smile-o"></i></small>
-  <div class="text">
-    <h2>Your Personal Information</h2>
-    <p>Enter your personal information to get closer to client.</p>
-  </div>
-  <div class="input-text">
-      <div class="input-div">
-        <%= f.text_field :first_name, id: 'user_name', placeholder: 'First Name' %>
-        <span>First Name</span>
-      </div>
-      <div class="input-div"> 
-        <%= f.text_field :last_name , placeholder: 'Last Name'%>
-        <span>Last Name</span>
-      </div>
-  </div>
-    <div class="input-text">
-        <div class="input-div">
-            <%= f.text_field :phone_number, placeholder: '03xxxxxxxxx' %>
-            <span>Phone number</span>
-        </div>
-        <div class="input-div">
-            <%= f.text_field :landline, placeholder: '04xxxxxxxx' %>
-            <span>Landline</span>
-        </div>
+<fieldset>
+    <h4>Tell us who you are:</h4>
+    <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, placeholder: 'First Name', class: 'f1-first-name form-control' %>
     </div>
-    <div class="input-text">
-        <div class="input-div">
-            <%= f.text_field :city %>
-            <span>City</span>
-        </div>
-        <div class="input-div">
-            <%= f.text_field :address , placeholder: 'Address'%>
-            <span>Address</span>
-        </div>
+    <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, placeholder: 'Last Name', class: 'f1-last-name form-control' %>
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="f1-phone-number">Phone Number</label>
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number, placeholder: '03xxxxxxxxx', class: "f1-phone-number form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :landline %>
+        <%= f.text_field :landline, placeholder: '04xxxxxxxx', class: "form-control"  %>
+    </div>
+    <div class="form-group">
+        <%= f.label :city %>
+        <%= f.text_field :city, class: "form-control"  %>
+    </div>
+    <div class="form-group">
+        <%= f.label :address %>
+        <%= f.text_field :address , placeholder: 'Address',  class: "form-control" %>
         <%= f.hidden_field :is_complete, value: 'true'%>
     </div>
-    <div class="buttons">
-        <button class="next_button">Next Step</button>
+    <div class="f1-buttons">
+        <button type="button" class="btn btn-next">Next</button>
     </div>
-</div>
+</fieldset>
+
+
