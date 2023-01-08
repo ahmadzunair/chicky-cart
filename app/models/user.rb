@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   enum role:   %w[user seller admin]
 
-  has_one_attached :image
+  has_one_attached :image , dependent: :destroy
 
 
   has_one :farm, dependent: :destroy

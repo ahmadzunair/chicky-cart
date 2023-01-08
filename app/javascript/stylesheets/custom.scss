@@ -260,6 +260,7 @@ header .navbar {
 }
 .navbar .navbar-brand h2 {
 	color: #fff;
+	margin-top: -7px;
 	text-transform: uppercase;
 	font-size: 24px;
 	font-weight: 700;
@@ -506,36 +507,6 @@ ul.slick-dots {
 .request-form a.border-button {
 	margin-top: 12px;
 	float: right;
-}
-
-
-
-
-/* Services */
-
-.services {
-	margin-top: 140px;
-}
-
-.service-item img {
-	width: 100%;
-	overflow: hidden;
-}
-
-.service-item .down-content {
-	background-color: #f7f7f7;
-	padding: 30px;
-}
-
-.service-item .down-content h4 {
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 0.25px;
-	margin-bottom: 15px;
-}
-
-.service-item .down-content p {
-	margin-bottom: 20px;
 }
 
 
