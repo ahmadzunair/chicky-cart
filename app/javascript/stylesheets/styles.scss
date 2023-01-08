@@ -226,3 +226,15 @@
     color: #818182;
 }
 
+  .review-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+
+  .message {
+    text-align: center;
+    color: #333;
+  }
